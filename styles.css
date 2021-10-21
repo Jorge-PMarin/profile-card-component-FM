@@ -19,10 +19,33 @@ body {
   font-size: 1.6rem;
   font-family: 'Kumbh Sans', sans-serif;
   color: var(--very-dark-desaturated-blue);
+}
+
+.container {
   display: flex;
   justify-content: center;
   align-items: center;
+  min-height: 100%;
   background-color: var(--dark-cyan);
+  position: relative;
+  overflow: hidden;
+}
+
+.card__pattern-top {
+  position: absolute;
+  left: -24.4%;
+  top: -78%;
+}
+
+.card__pattern-bottom {
+  position: absolute;
+  left: 49%;
+  top: 50%;
+}
+
+.card__pattern-bottom {
+  bottom: -50%;
+  right: -50%;
 }
 
 .card {
@@ -46,24 +69,24 @@ body {
   padding: 6rem 0 3rem 0;
 }
 
-.card__profile__img {
+.card__avatar {
   border-radius: 50%;
   border: 0.5rem solid #fff;
   position: absolute;
   top: 8rem;
 }
 
-.card__profile__age,
-.card__profile__location {
+.card__age,
+.card__location {
   font-weight: 400;
   color: var(--dark-grayish-blue);
 }
 
-.card__profile__age {
+.card__age {
   padding-left: 0.5rem;
 }
 
-.card__profile__name {
+.card__username {
   font-size: 1.8rem;
   margin-bottom: 1rem;
 }
@@ -75,16 +98,28 @@ body {
   border-top: 0.1rem solid var(--dark-gray);
 }
 
-.card__stats__bold {
+.card__amount {
   text-align: center;
   font-size: 1.8rem;
 }
 
-.card__stats__small {
+.card__small {
   display: block;
   color: var(--dark-grayish-blue);
   font-size: 1.4rem;
   text-transform: capitalize;
   font-weight: 400;
   margin-top: 0.3rem;
+}
+
+@media (max-width: 600px) {
+  .card__pattern-top {
+    left: -195%;
+    top: -96%;
+  }
+
+  .card__pattern-bottom {
+    left: 50%;
+    top: 35%;
+  }
 }
